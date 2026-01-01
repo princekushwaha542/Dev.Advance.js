@@ -5,14 +5,17 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#1f4037,#99f2c8);
+body,html{
+    height:100%;
+    width: 100%;
+    background:linear-gradient(135deg,#080808,#374d44);
+    ;
 }
-
+#parent{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
 .player{
     width:320px;
     background:#111;
@@ -21,6 +24,7 @@ body{
     text-align:center;
     color:white;
     box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    margin-top: 27%;
 }
 
 .player h2{
@@ -28,10 +32,7 @@ body{
     font-size:20px;
 }
 
-#progress{
-    width:100%;
-    margin:15px 0;
-}
+
 
 .controls{
     display:flex;
@@ -55,4 +56,60 @@ body{
 }
 audio{
     display: none;
+}
+
+#title{
+    display: none;
+}
+.nav{
+    height: 30px;
+    width: 100%;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    position: fixed;
+}
+.nav h1{
+    color: white;
+    font-weight: 300;
+    font-size: 25px;
+}
+.link{
+    font-size: 25px;
+    padding-top: 10px;
+    color: rgb(145, 143, 143);
+    font-weight: 300;
+    padding-left: 150px;
+    cursor: pointer;
+}
+
+.link  :hover{
+    color: white;
+}
+
+.search{
+    font-size: 15px;
+    padding-top: 10px;
+    color: black;
+    background-color: rgb(226, 222, 222);
+    border: none;
+    font-weight: 200;
+    padding-right: 150px;
+    cursor: pointer;
+}
+.search-icon{
+    font-size: 25px;
+    padding-top: 15px; 
+    color: white;
+}
+.search-icon:hover{
+    transform: scale(2);
+    color: rgb(196, 193, 193);
+}
+#parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
