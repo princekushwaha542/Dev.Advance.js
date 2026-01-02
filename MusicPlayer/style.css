@@ -9,7 +9,7 @@ body,html{
     height:100%;
     width: 100%;
     background:linear-gradient(135deg,#080808,#374d44);
-    ;
+    user-select: none;
 }
 #parent{
     height: 100vh;
@@ -74,35 +74,46 @@ audio{
 .nav h1{
     color: white;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 27px;
+  font-family: "Londrina Outline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
 }
 .link{
-    font-size: 25px;
+    font-size: 15px;
+    width: 80px;
+    height: 100%;
     padding-top: 10px;
     color: rgb(145, 143, 143);
     font-weight: 300;
     padding-left: 150px;
     cursor: pointer;
+    background-color: red;
+    display: inline-block;
 }
 
-.link  :hover{
-    color: white;
+.h2:hover{
+    color: rgb(201, 195, 195);
 }
 
 .search{
     font-size: 15px;
     padding-top: 10px;
-    color: black;
-    background-color: rgb(226, 222, 222);
+    height: 30px;
+    color: rgb(205, 202, 202);
+    background-color: rgb(68, 67, 67);
     border: none;
     font-weight: 200;
     padding-right: 150px;
     cursor: pointer;
+    border-radius: 30px;
+    text-align: center;
 }
 .search-icon{
     font-size: 25px;
     padding-top: 15px; 
-    color: white;
+    color: rgb(102, 97, 97);
 }
 .search-icon:hover{
     transform: scale(2);
@@ -112,4 +123,42 @@ audio{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.home{
+    font-size: 20px;
+    color: white;
+    background-color: #3f3e3e;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+}
+.h2{
+    color: white;
+    font-size: 15px;
+    padding: 5px;
+    display: inline-block;
+    font-weight: 100;
+}
+.singing{
+    color: white;
+    font-size: 20px;
+    
+}
+.btn{
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+    border: none;
+
+}
+.line{
+    height: 80%;
+    width: 2px;
+    background-color: wheat;
+}
+.btn:hover{
+    background-color: #c4bdbd;
 }

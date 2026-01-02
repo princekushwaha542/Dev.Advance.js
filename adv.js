@@ -1,13 +1,14 @@
 console.log(this);
-function test(){
+function abcd(){
     console.log(this);
 }
-test();
-const obj = {
-    name: 'Prince',
-    get: function(){
-        console.log(this);
-    }
-}
-obj.get();
+abcd();
 
+const student = {
+    name: "Prince",
+    to : console.log(this),
+    sayname : function(){
+      console.log(this);
+    },
+};
+student.sayname();
