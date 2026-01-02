@@ -13,18 +13,20 @@ body,html{
 }
 #parent{
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    background-color: rgb(20, 19, 19);
 }
 .player{
     width:320px;
-    background:#111;
+    background:#212020;
     padding:25px;
     border-radius:20px;
     text-align:center;
     color:white;
     box-shadow:0 20px 40px rgba(0,0,0,0.4);
     margin-top: 27%;
+    position: fixed;
+    left: 37%;
+    bottom: 5%;
 }
 
 .player h2{
@@ -62,13 +64,13 @@ audio{
     display: none;
 }
 .nav{
-    height: 30px;
+    height: 50px;
     width: 100%;
-    background-color:transparent;
+    background-color:rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin-top: 10px;
+    margin-top: 2px;
     position: fixed;
 }
 .nav h1{
@@ -108,6 +110,7 @@ audio{
     padding-right: 150px;
     cursor: pointer;
     border-radius: 30px;
+    border: white 1px solid;
     text-align: center;
 }
 .search-icon{
@@ -121,13 +124,12 @@ audio{
 }
 #parent{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
 .home{
     font-size: 20px;
+   margin-top: 5px;
     color: white;
-    background-color: #3f3e3e;
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -161,4 +163,31 @@ audio{
 }
 .btn:hover{
     background-color: #c4bdbd;
+}
+.playlist{
+    top: 20%;
+    color: rgb(255, 255, 255);
+    height: 90%;
+    width: 100%;
+    display: flex;
+    margin-top: 5%;
+    padding: 0;
+}
+.playBtn{
+    font-weight: 100;
+    margin-left: 5%;
+    margin-top: 3%;
+    height: 30px;
+    width: 70px;
+    padding: 3px;
+    color: white;
+    background-color: rgb(47, 46, 46);
+    border-radius: 40px;
+    border: none;
+}
+.twobtn{
+    margin-left: 10px;
+}
+.playBtn:hover{
+background-color: #646060;
 }
