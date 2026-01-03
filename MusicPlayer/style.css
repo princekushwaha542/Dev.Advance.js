@@ -188,6 +188,10 @@ audio{
 .twobtn{
     margin-left: 10px;
 }
+.threebtn{
+    margin-left: 10px;
+
+}
 .playBtn:hover{
 background-color: #646060;
 }
@@ -200,6 +204,7 @@ background-color: #646060;
     margin-left: -200px;
     color: rgb(245, 233, 233);
     flex-direction: column;
+    display: none;
 }
 .songs{
     display: flex;
@@ -216,4 +221,17 @@ background-color: #646060;
 }
 .songIcon{
     margin-right: 30px;
+}
+.active{
+animation: anime 20s linear infinite;
+}
+@keyframes anime {
+    50%{
+        transform: translateX(70%);
+    }
+    100%{
+        transform: translateX(-0%);
+        color: #c4bdbd;
+
+    }
 }

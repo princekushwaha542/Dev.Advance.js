@@ -60,11 +60,32 @@ audio.addEventListener("ended", nextSong);
 
 let OneBtn = document.querySelector(".onebtn");
 let TwoBtn = document.querySelector(".twobtn");
-
-
+let song = document.querySelector(".songs");
+let songss = document.querySelectorAll(".songs");
+let SongList = document.querySelector(".SongList")
 OneBtn.addEventListener("click",function(){
-
+  
+if (OneBtn.style.backgroundColor = "black"){
+   SongList.style.display = "none";
+}
+else {
+    SongList.style.display = "initial";
+   OneBtn.style.backgroundColor = "black"
+}
 });
 TwoBtn.addEventListener("click", ()=>{
 
 })
+songss.forEach(song => {
+song.addEventListener("click",function(){
+    if (song.classList.contains("active"))
+    {
+    song.classList.remove("active")
+    }
+    else {
+    songss.forEach(song => song.classList.remove("active"));
+    song.classList.add("active")
+    
+    }
+});
+});
