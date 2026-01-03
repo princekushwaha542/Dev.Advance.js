@@ -191,3 +191,29 @@ audio{
 .playBtn:hover{
 background-color: #646060;
 }
+.SongList{
+    height: 350px;
+    width: 100%;
+    margin-top: 130px;
+    /* background-color: red; */
+    display: flex;
+    margin-left: -200px;
+    color: rgb(245, 233, 233);
+    flex-direction: column;
+}
+.songs{
+    display: flex;
+    justify-content: start;
+    margin-top: 4px;
+    height: 40px;
+    width: 100%;
+    padding-top: 8px;
+    padding-left: 50px;
+    font-weight: 200;
+}
+.songs:hover{
+  background-color: #1c1818;
+}
+.songIcon{
+    margin-right: 30px;
+}

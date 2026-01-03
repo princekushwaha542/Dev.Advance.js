@@ -57,3 +57,14 @@ progress.addEventListener("input", ()=>{
 });
 
 audio.addEventListener("ended", nextSong);
+
+let OneBtn = document.querySelector(".onebtn");
+let TwoBtn = document.querySelector(".twobtn");
+
+
+OneBtn.addEventListener("click",function(){
+
+});
+TwoBtn.addEventListener("click", ()=>{
+
+})
