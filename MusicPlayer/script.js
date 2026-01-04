@@ -58,28 +58,40 @@ progress.addEventListener("input", ()=>{
 
 audio.addEventListener("ended", nextSong);
 
+let AddBtn = document.querySelector(".threebtn");
 let OneBtn = document.querySelector(".onebtn");
 let TwoBtn = document.querySelector(".twobtn");
 let song = document.querySelector(".songs");
 let songss = document.querySelectorAll(".songs");
 let SongList = document.querySelector(".SongList")
-OneBtn.addEventListener("click",function(){
-  
-if (OneBtn.style.backgroundColor = "black"){
-   SongList.style.display = "none";
-}
-else {
-    SongList.style.display = "initial";
-   OneBtn.style.backgroundColor = "black"
-}
+let AddList = document.querySelector(".Addlist")
+OneBtn.addEventListener("click", ()=>{
+   SongList.style.display = "initial";
+   OneBtn.style.backgroundColor = "black";
+   TwoBtn.style.backgroundColor = "rgb(47, 46, 46)";
+   AddBtn.style.backgroundColor = "rgb(47, 46, 46)";
+   AddList.style.display = "none";
+   
 });
 TwoBtn.addEventListener("click", ()=>{
+   SongList.style.display = "initial";
+   AddList.style.display = "none";
+   TwoBtn.style.backgroundColor = "black"
+   OneBtn.style.backgroundColor = "rgb(47, 46, 46)";
+   AddBtn.style.backgroundColor = "rgb(47, 46, 46)";
 
 })
+AddBtn.addEventListener("click", ()=>{
+   AddList.style.display = "initial";
+   AddBtn.style.backgroundColor = "black";
+   TwoBtn.style.backgroundColor = "rgb(47, 46, 46)";
+   OneBtn.style.backgroundColor = "rgb(47, 46, 46)";
+   SongList.style.display = "none";
+});
 songss.forEach(song => {
 song.addEventListener("click",function(){
     if (song.classList.contains("active"))
-    {
+    { 
     song.classList.remove("active")
     }
     else {

@@ -222,7 +222,7 @@ background-color: #646060;
 .songIcon{
     margin-right: 30px;
 }
-.active{
+.active h3{
 animation: anime 20s linear infinite;
 }
 @keyframes anime {
@@ -234,4 +234,26 @@ animation: anime 20s linear infinite;
         color: #c4bdbd;
 
     }
+}
+.Addlist{
+    height: 350px;
+    width: 80%;
+    margin-top: 130px;
+    /* background-color: red; */
+    display: flex;
+    margin-left: -1200px;
+    color: rgb(245, 233, 233);
+
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 300px;
+    display: none;
+
+}
+.Addlist h2{
+    color: rgb(160, 151, 151);
+    margin-left: 200px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-shadow: 2px 2px 5px rgb(190, 88, 88);
 }
