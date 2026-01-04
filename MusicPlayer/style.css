@@ -257,3 +257,27 @@ animation: anime 20s linear infinite;
     padding-top: 20px;
     text-shadow: 2px 2px 5px rgb(190, 88, 88);
 }
+#main{ 
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fileimp{
+    display: none;
+}
+#btn{
+    background-color: rgb(74, 115, 32);
+    color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    user-select: none;
+}
+#btn:hover{
+    background-color: rgb(67, 88, 45);
+}
+#atag{
+color: red;
+padding: 20px;
+}

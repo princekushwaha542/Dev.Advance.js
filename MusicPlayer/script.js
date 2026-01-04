@@ -101,3 +101,20 @@ song.addEventListener("click",function(){
     }
 });
 });
+let btn=document.querySelector("#btn");
+let fileimp=document.querySelector("#fileimp");
+let atag=document.getElementById("atag");
+
+btn.addEventListener("click",function(){
+    fileimp.click();
+});
+fileimp.addEventListener("change",function(val){
+    btn.textContent=val.target.files[0].name;
+   const file = val.target.files[0]; 
+  if (file) {
+    const url = URL.createObjectURL(file); 
+    atag.setAttribute("href", url);
+  }
+  console.log(val.target.files[0]);
+  atag.title=file.neme;
+});
