@@ -90,34 +90,33 @@ AddBtn.addEventListener("click", ()=>{
    OneBtn.style.backgroundColor = "rgb(47, 46, 46)";
    SongList.style.display = "none";
 });
-songss.forEach(song => {
-    song.addEventListener("click",()=>{
-         
-    });
- 
-})
-songss.forEach(song => {
-song.addEventListener("click",function(){
-     if (
-    song.innerText === titles[0] ||
-    song.innerText === titles[1] ||
-    song.innerText === titles[2] ||
-    song.innerText === titles[3]
-) {
+songss.forEach((song, i) => {
+  song.addEventListener("click", () => {
+
+    // same song click → pause
+    if (song.classList.contains("active")) {
+      audio.pause();
+      song.classList.remove("active");
+      playBtn.innerText = "▶";
+      return;
+    }
+
+    // remove active from all
+    songss.forEach(s => s.classList.remove("active"));
+
+    // 🔥 MAIN FIX
+    index = i;                 // global index update
+    audio.src = songs[index];  // mp3 file
+    title.innerText = titles[index];
+
+    audio.load();
     audio.play();
+    playBtn.innerText = "⏸";
+
     song.classList.add("active");
-}
-    if (song.classList.contains("active"))
-    { 
-    song.classList.remove("active")
-    }
-    else {
-    songss.forEach(song => song.classList.remove("active"));
-    song.classList.add("active")
-    
-    }
+  });
 });
-});
+
 let btn=document.querySelector("#btn");
 let fileimp=document.querySelector("#fileimp");
 let atag=document.getElementById("atag");
@@ -134,4 +133,57 @@ fileimp.addEventListener("change",function(val){
   }
   console.log(val.target.files[0]);
   atag.title=file.neme;
+});
+const submitBtn = document.getElementById("submitBtn");
+
+
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault(); // page refresh stop
+
+    const file = fileimp.files[0];
+    if (!file) {
+        alert("Please select a song first");
+        return;
+    }
+
+    // sirf audio allow
+    if (!file.type.startsWith("audio")) {
+        alert("Only MP3 / audio files allowed");
+        return;
+    }
+
+    // browser URL
+    const songURL = URL.createObjectURL(file);
+
+    // arrays me add
+    songs.push(songURL);
+    titles.push(file.name);
+    const newIndex = songs.length - 1;
+
+    // song list me add
+    const li = document.createElement("li");
+    li.className = "songs";
+    li.innerText = file.name;
+    SongList.appendChild(li);
+    
+
+    // click event for new song
+    li.addEventListener("click", () => {
+        index = newIndex;
+        audio.src = songs[index];
+        title.innerText = titles[index];
+
+        audio.play();
+        playBtn.innerText = "⏸";
+
+        document.querySelectorAll(".songs").forEach(s => s.classList.remove("active"));
+        li.classList.add("active");
+    });
+
+    // view file link
+    atag.href = songURL;
+    atag.title = file.name;
+
+    // reset input
+    fileimp.value = "";
 });
