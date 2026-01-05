@@ -1,12 +1,14 @@
 const songs = [
-    "song1.mp3",
-    "song2.mp3",
+    "JholAcoustic.mp3",
+    "Raanjhan.mp3",
+    "BORDER_2_Ghar_Kab-Aaoge.mp3",
     "song3.mp3"
 ];
 
 const titles = [
-    "SO Love Me Like You Do",
-    "SO Love Me Like You Do",
+    "JHOL",
+    "RAANJHAN",
+    "Border 2 Ghar Kab Aaoge",
     "SO Love Me Like You Do"
 ];
 
@@ -89,7 +91,22 @@ AddBtn.addEventListener("click", ()=>{
    SongList.style.display = "none";
 });
 songss.forEach(song => {
+    song.addEventListener("click",()=>{
+         
+    });
+ 
+})
+songss.forEach(song => {
 song.addEventListener("click",function(){
+     if (
+    song.innerText === titles[0] ||
+    song.innerText === titles[1] ||
+    song.innerText === titles[2] ||
+    song.innerText === titles[3]
+) {
+    audio.play();
+    song.classList.add("active");
+}
     if (song.classList.contains("active"))
     { 
     song.classList.remove("active")
