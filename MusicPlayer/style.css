@@ -386,7 +386,7 @@ padding: 20px;
 }
 @media (max-width:600px){
     .player{
-        left: 16%;
+        left: 6%;
         margin-top: 50%;
     }
  
@@ -398,7 +398,7 @@ padding: 20px;
 .SongList{
     margin-top: 60%;
     margin-left: -280px;
-    width: 76%;
+    width: 100%;
 }
 .nav{
     height: 50px;
@@ -414,21 +414,21 @@ padding: 20px;
 .nav h1{
     color: white;
     font-weight: 300;
-    font-size: 35px;
   font-family: "Londrina Outline", sans-serif;
   font-weight: 400;
   font-style: normal;
   white-space: nowrap;
-  font-size: 45px;
+  font-size: 38px;
 
 }
 .search{
     margin-top: 150px;
-    margin-left: -280px;
+    margin-left: -290px;
     font-size: 15px;
     padding-top: 10px;
     border: white 1px solid;
     text-align: center;
+    width: 290px;
 }
 .faci, .line{
     display: none;
@@ -438,26 +438,66 @@ padding: 20px;
 }
 .btn{
     margin-top: -3px;
-    height: 40px;
-    width: 80px;
-    margin-left: -45px;
+    height: 30px;
+    width: 60px;
+    margin-left: -58px;
 }
 .left{
-    display: none;
 }
+.loginPage{
+    grid-row: inherit;
+    height: 100px;
+    width: 80px;
+    background-color: #ac2b2b;
+    z-index: 9999;
+    margin-right: 0%;
+    margin-left: 1px;
+    display: grid;
+    display: none;
+    background-color: red;
+    left: 10px;
+    display: none;
+    overflow: hidden;
+}
+
 .bottum{
-    grid-row: 2;
     height: 30vh;
-    width:420px;
-    margin-left: -200px;
+    width:350px;
     padding-top: 60px;
+    margin-left: -200px;
 }
 .right{
     height: 70vh;
     width: 100vh;
-    margin-left: -420px;
+    margin-left: -360px;
     padding-top: 30%;
     padding-left: 10%;
     background-color: #000000;
+}
+.img-2{
+  display: none;
+}
+.exiit{
+    margin-top: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    display: block;
+    font-size: 20px;
+}
+.Addlist{
+    height: 350px;
+    width: 80%;
+    margin-top: 130px;
+    /* background-color: red; */
+    display: flex;
+    margin-left: -480px;
+    color: rgb(245, 233, 233);
+
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 300px;
+    display: none;
+
 }
 }

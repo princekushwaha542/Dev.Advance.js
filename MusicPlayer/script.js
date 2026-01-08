@@ -208,3 +208,7 @@ loginBtn1.addEventListener("click", () =>{
         loginPage.style.display = "none";
     }
 });
+let exitBtn = document.querySelector(".exiit");
+exitBtn.addEventListener("click", () =>{
+    loginPage.style.display = "none";
+});
