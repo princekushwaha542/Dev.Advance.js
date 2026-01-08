@@ -187,3 +187,24 @@ submitBtn.addEventListener("click", (e) => {
     // reset input
     fileimp.value = "";
 });
+
+let loginPage = document.querySelector("#loginPage");
+let loginBtn =document.querySelector(".btn");
+let loginBtn1 =document.querySelector(".btn1");
+
+loginBtn.addEventListener("click", () =>{
+    if(getComputedStyle(loginPage).display === "none"){
+        loginPage.style.display = "grid";
+    }
+     else{
+        loginPage.style.display = "none";
+    }
+});
+loginBtn1.addEventListener("click", () =>{
+    if(getComputedStyle(loginPage).display === "none"){
+        loginPage.style.display = "grid";
+    }
+     else{
+        loginPage.style.display = "none";
+    }
+});
