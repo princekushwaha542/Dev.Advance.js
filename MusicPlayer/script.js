@@ -161,14 +161,20 @@ submitBtn.addEventListener("click", (e) => {
     const newIndex = songs.length - 1;
 
     // song list me add
-    const li = document.createElement("li");
-    li.className = "songs";
-    li.innerText = file.name;
-    SongList.appendChild(li);
+    let div = document.createElement("div");
+    let h2 = document.createElement("h2");
+    let i = document.createElement("i");
+
+    i.classList.add("ri-music-fill", "songIcon");
+    div.className = "songs";
+    h2.innerText = file.name;
+    div.appendChild(i);
+    div.appendChild(h2);
+    SongList.appendChild(div);
     
 
     // click event for new song
-    li.addEventListener("click", () => {
+    div.addEventListener("click", () => {
         index = newIndex;
         audio.src = songs[index];
         title.innerText = titles[index];
@@ -177,7 +183,7 @@ submitBtn.addEventListener("click", (e) => {
         playBtn.innerText = "⏸";
 
         document.querySelectorAll(".songs").forEach(s => s.classList.remove("active"));
-        li.classList.add("active");
+        div.classList.add("active");
     });
 
     // view file link

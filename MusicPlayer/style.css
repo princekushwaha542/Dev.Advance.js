@@ -167,11 +167,14 @@ audio{
 .playlist{
     top: 20%;
     color: rgb(255, 255, 255);
-    height: 90%;
+    height: 60%;
     width: 100%;
     display: flex;
     margin-top: 5%;
     padding: 0;
+    /* background-color: red; */
+    overflow: auto;
+    padding-left: 250px;
 }
 .playBtn{
     font-weight: 100;
@@ -186,11 +189,16 @@ audio{
     border: none;
 }
 .twobtn{
-    margin-left: 10px;
+    margin-left: -80px;
+    position: fixed;
 }
 .threebtn{
     margin-left: 10px;
-
+    position: fixed;
+}
+.onebtn{
+    margin-left: -160px;
+    position: fixed;
 }
 .playBtn:hover{
 background-color: #646060;
@@ -211,7 +219,7 @@ background-color: #646060;
     justify-content: start;
     margin-top: 4px;
     height: 40px;
-    width: 100%;
+    width: 115%;
     padding-top: 8px;
     padding-left: 50px;
     font-weight: 200;
@@ -441,8 +449,6 @@ padding: 20px;
     height: 30px;
     width: 60px;
     margin-left: -58px;
-}
-.left{
 }
 .loginPage{
     grid-row: inherit;
