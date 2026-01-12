@@ -139,7 +139,7 @@ const submitBtn = document.getElementById("submitBtn");
 
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault(); // page refresh stop
-
+    btn.innerText = "Upload file";
     const file = fileimp.files[0];
     if (!file) {
         alert("Please select a song first");
