@@ -156,6 +156,9 @@ audio{
     border: none;
 
 }
+.h2:hover{
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
 .line{
     height: 80%;
     width: 2px;
